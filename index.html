@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahakumbh Mela</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">Mahakumbh Mela</div>
+    <nav>
+        <a href="#navigation">Navigation</a>
+        <a href="#booking">Booking</a>
+        <a href="#events">Event Updates</a>
+        <a href="#emergency">Emergency</a>
+    </nav>
+    <div class="user-profile">
+        <span>Welcome, User</span>
+    </div>
+</header>
+
+<!-- Main Section -->
+<section class="main-section">
+    <h1>Welcome to Mahakumbh Mela</h1>
+    <input type="text" placeholder="Search for accommodations or services...">
+    <div class="buttons">
+        <a href="#navigation">Navigation</a>
+        <a href="#booking">Book Accommodation</a>
+        <a href="#events">Event Updates</a>
+        <a href="#emergency">Emergency Assistance</a>
+    </div>
+    <div class="crowd-ticker">
+        <span>Real-time Crowd Density: Low (Green) to High (Red)</span>
+    </div>
+</section>
+
+<!-- Navigation and Map Section -->
+<section class="map-section" id="navigation">
+    <h2>Interactive Map</h2>
+    <div class="map">
+        <!-- Google Maps will be embedded here -->
+        <p>Interactive Map Placeholder</p>
+    </div>
+    <div class="filters">
+        <label for="location-filter">Filter by Location:</label>
+        <select id="location-filter">
+            <option value="ghats">Ghats</option>
+            <option value="food">Food Stalls</option>
+            <option value="accommodations">Accommodations</option>
+        </select>
+    </div>
+</section>
+
+<!-- Accommodation and Booking Section -->
+<section class="booking-section" id="booking">
+    <h2>Accommodation & Booking</h2>
+    <div class="card">
+        <img src="accommodation.jpg" alt="Accommodation Image">
+        <div class="details">
+            <p>Price: ₹1500</p>
+            <p>Distance: 1 km from Ghats</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+        </div>
+        <button class="book-now">Book Now</button>
+    </div>
+    <div class="card">
+        <img src="accommodation2.jpg" alt="Accommodation Image">
+        <div class="details">
+            <p>Price: ₹2000</p>
+            <p>Distance: 500m from Ghats</p>
+            <p>Rating: ⭐⭐⭐⭐</p>
+        </div>
+        <button class="book-now">Book Now</button>
+    </div>
+</section>
+
+<!-- Event Schedule and Notifications Section -->
+<section class="event-section" id="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-card">
+        <img src="event1.jpg" alt="Event Image">
+        <h3>Morning Aarti</h3>
+        <p>Time: 6:00 AM</p>
+        <p>Location: Ganga Ghat</p>
+    </div>
+    <div class="event-card">
+        <img src="event2.jpg" alt="Event Image">
+        <h3>Evening Satsang</h3>
+        <p>Time: 7:00 PM</p>
+        <p>Location: Ganga Ghat</p>
+    </div>
+</section>
+
+<!-- Emergency Assistance Section -->
+<section id="emergency">
+    <button class="sos-button" onclick="alert('Emergency services have been contacted!')">SOS</button>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact Support</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+    <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
