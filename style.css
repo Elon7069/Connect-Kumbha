@@ -1,278 +1,288 @@
-/* Global Styles */
-:root {
-    --primary-color: #f7b731;
-    --secondary-color: #ff6347;
-    --background-color-light: #ffffff;
-    --background-color-dark: #2d3436;
-    --text-color-light: #ffffff;
-    --text-color-dark: #2d3436;
-    --border-radius: 8px;
-    --font-family: 'Roboto', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-family);
-    background-color: var(--background-color-light);
-    color: var(--text-color-dark);
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header */
-header {
+/* Authentication Page Styles */
+.auth-page {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 15px 30px;
-    background-color: var(--primary-color);
+  }
+  
+  .auth-container {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .auth-header h1 {
+    color: #333;
+    margin: 0;
+  }
+  
+  .auth-header p {
+    margin: 10px 0 20px;
+    color: #777;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #ff7e5f;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background: #feb47b;
+  }
+  
+  .link-button {
+    background: none;
+    border: none;
+    color: #ff7e5f;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }  
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #6200ea;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--background-color-light);
-}
-
-header nav {
-    flex-grow: 1;
     text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-header nav a {
-    margin: 0 15px;
-    font-size: 18px;
-    color: var(--background-color-light);
-    transition: color 0.3s ease;
-}
-
-header nav a:hover {
-    color: var(--secondary-color);
-}
-
-header .user-profile {
-    font-size: 18px;
-    color: var(--background-color-light);
-}
-
-/* Main Section */
-.main-section {
+nav ul {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    background: url('mahakumbh-banner.jpg') no-repeat center center/cover;
-    height: 60vh;
-    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.main-section h1 {
-    font-size: 48px;
-    color: var(--background-color-light);
-    margin-bottom: 20px;
+nav ul li {
+    margin: 0 1rem;
 }
 
-.main-section input[type="text"] {
-    padding: 12px;
-    width: 300px;
-    margin: 20px 0;
-    border-radius: var(--border-radius);
-    border: none;
-    font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.main-section .buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.main-section .buttons a {
-    background-color: var(--primary-color);
-    padding: 12px 30px;
-    color: var(--background-color-light);
-    border-radius: var(--border-radius);
+nav ul li a {
+    color: white;
+    text-decoration: none;
     font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s;
 }
 
-.main-section .buttons a:hover {
-    background-color: var(--secondary-color);
+nav ul li a:hover {
+    color: #ffdd57;
 }
 
-/* Navigation and Map */
-.map-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.map-section .map {
-    width: 100%;
-    height: 400px;
-    background-color: #e0e0e0;
-    border-radius: var(--border-radius);
-    margin-bottom: 30px;
-}
-
-/* Accommodation and Booking */
-.booking-section {
-    padding: 40px 20px;
-}
-
-.booking-section .card {
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.booking-section .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-}
-
-.booking-section .card .details {
-    margin-top: 10px;
-}
-
-.booking-section .card .details p {
-    margin: 5px 0;
-}
-
-.booking-section .card .book-now {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: var(--background-color-light);
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s ease;
-}
-
-.booking-section .card .book-now:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Event Schedule and Notifications */
-.event-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.event-section .event-card {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    width: 80%;
-    text-align: center;
-}
-
-.event-section .event-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-}
-
-/* Emergency Assistance */
-.sos-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 15px 30px;
-    background-color: red;
-    color: var(--background-color-light);
-    font-size: 18px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.sos-button:hover {
-    background-color: #d32f2f;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: var(--background-color-light);
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
 
-footer .footer-links {
-    margin-top: 20px;
+/* Home Page Styles */
+main {
+    text-align: center;
+    padding: 2rem;
 }
 
-footer .footer-links a {
-    margin: 0 15px;
-    color: var(--background-color-light);
-    font-size: 16px;
-    transition: color 0.3s ease;
+main h1 {
+    font-size: 2.5rem;
+    color: #6200ea;
+    margin-bottom: 1rem;
 }
 
-footer .footer-links a:hover {
-    color: var(--secondary-color);
+main p {
+    font-size: 1.2rem;
+    color: #555;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    header nav {
-        display: none;
-    }
-
-    header .user-profile {
-        font-size: 16px;
-    }
-
-    .main-section input[type="text"] {
-        width: 80%;
-    }
-
-    .main-section .buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .booking-section .card {
-        width: 100%;
-    }
-
-    .event-section .event-card {
-        width: 100%;
-    }
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-@media (max-width: 480px) {
-    .main-section h1 {
-        font-size: 30px;
-    }
+.feature-box {
+    background-color: #ffdd57;
+    color: #333;
+    padding: 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .sos-button {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation Page Styles */
+#map {
+    height: 500px;
+    margin: 2rem auto;
+    background-color: #e0e0e0;
+    border: 2px solid #6200ea;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #6200ea;
+}
+
+/* Booking Page Styles */
+form {
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem auto;
+    width: 60%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+form input, form button {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus {
+    border-color: #6200ea;
+    outline: none;
+}
+
+form button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #ffdd57;
+    color: #333;
+}
+
+/* Events Page Styles */
+#event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 2px solid #6200ea;
+    border-radius: 8px;
+    width: 300px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-card h2 {
+    font-size: 1.5rem;
+    color: #6200ea;
+    margin-bottom: 1rem;
+}
+
+.event-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Emergency Page Styles */
+#sos-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #ff3d00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 2rem;
+}
+
+#sos-button:hover {
+    background-color: #d32f2f;
+    transform: translateY(-5px);
 }
